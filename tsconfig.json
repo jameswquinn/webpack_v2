@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "dayjs": ["node_modules/dayjs/index.d.ts"],
+      "lit-html": ["node_modules/lit-html/lit-html.d.ts"],
+      "lit-element": ["node_modules/lit-element/lit-element.d.ts"]
+    },
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true
+  }
+}
