@@ -1,5 +1,7 @@
 const webpack = require("webpack");
 const path = require("path");
+const precss = require("precss");
+const autoprefixer = require("autoprefixer");
 
 /**
  * SplitChunksPlugin is enabled by default and replaced
@@ -67,6 +69,15 @@ module.exports = {
           },
           {
             loader: "css-loader"
+          },
+          {
+            loader: "postcss-loader", // Run post css actions
+            options: {
+              plugins: function() {
+                // post css plugins, can be exported to postcss.config.js
+                return [require("precss"), require("autoprefixer")];
+              }
+            }
           },
           {
             loader: "sass-loader"

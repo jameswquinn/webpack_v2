@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.30.0",
   "hash": "025f00e3a25c3e333c02",
-  "time": 4680,
-  "builtAt": 1556052766552,
+  "time": 2218,
+  "builtAt": 1556054898133,
   "publicPath": "",
   "outputPath": "/Users/jamesquinn/Desktop/compareWebPackConfig/dist",
   "assetsByChunkName": {
@@ -93,8 +93,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 206,
-            "building": 1598
+            "factory": 192,
+            "building": 893
           },
           "failed": false,
           "errors": 0,
@@ -153,8 +153,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 206,
-        "building": 1598
+        "factory": 192,
+        "building": 893
       },
       "failed": false,
       "errors": 0,
@@ -260,8 +260,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 65,
-                "building": 84
+                "factory": 53,
+                "building": 59
               },
               "failed": false,
               "errors": 0,
@@ -308,14 +308,14 @@
                   "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/lib/loader.js!/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/default_index.ejs",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs",
                   "profile": {
-                    "factory": 65,
-                    "building": 84
+                    "factory": 53,
+                    "building": 59
                   }
                 }
               ],
               "profile": {
-                "factory": 13,
-                "building": 2832
+                "factory": 19,
+                "building": 1521
               },
               "failed": false,
               "errors": 0,
@@ -363,8 +363,8 @@
                   "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/lib/loader.js!/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/default_index.ejs",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs",
                   "profile": {
-                    "factory": 65,
-                    "building": 84
+                    "factory": 53,
+                    "building": 59
                   }
                 },
                 {
@@ -372,14 +372,14 @@
                   "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/lodash/lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 13,
-                    "building": 2832
+                    "factory": 19,
+                    "building": 1521
                   }
                 }
               ],
               "profile": {
                 "factory": 5,
-                "building": 18
+                "building": 4
               },
               "failed": false,
               "errors": 0,
@@ -427,8 +427,8 @@
                   "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/lib/loader.js!/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/default_index.ejs",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs",
                   "profile": {
-                    "factory": 65,
-                    "building": 84
+                    "factory": 53,
+                    "building": 59
                   }
                 },
                 {
@@ -436,14 +436,14 @@
                   "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/lodash/lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 13,
-                    "building": 2832
+                    "factory": 19,
+                    "building": 1521
                   }
                 }
               ],
               "profile": {
                 "factory": 5,
-                "building": 18
+                "building": 4
               },
               "failed": false,
               "errors": 0,
@@ -502,8 +502,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 65,
-            "building": 84
+            "factory": 53,
+            "building": 59
           },
           "failed": false,
           "errors": 0,
@@ -550,14 +550,14 @@
               "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/lib/loader.js!/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/default_index.ejs",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs",
               "profile": {
-                "factory": 65,
-                "building": 84
+                "factory": 53,
+                "building": 59
               }
             }
           ],
           "profile": {
-            "factory": 13,
-            "building": 2832
+            "factory": 19,
+            "building": 1521
           },
           "failed": false,
           "errors": 0,
@@ -605,8 +605,8 @@
               "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/lib/loader.js!/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/default_index.ejs",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs",
               "profile": {
-                "factory": 65,
-                "building": 84
+                "factory": 53,
+                "building": 59
               }
             },
             {
@@ -614,14 +614,14 @@
               "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 13,
-                "building": 2832
+                "factory": 19,
+                "building": 1521
               }
             }
           ],
           "profile": {
             "factory": 5,
-            "building": 18
+            "building": 4
           },
           "failed": false,
           "errors": 0,
@@ -669,8 +669,8 @@
               "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/lib/loader.js!/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/html-webpack-plugin/default_index.ejs",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs",
               "profile": {
-                "factory": 65,
-                "building": 84
+                "factory": 53,
+                "building": 59
               }
             },
             {
@@ -678,14 +678,14 @@
               "identifier": "/Users/jamesquinn/Desktop/compareWebPackConfig/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 13,
-                "building": 2832
+                "factory": 19,
+                "building": 1521
               }
             }
           ],
           "profile": {
             "factory": 5,
-            "building": 18
+            "building": 4
           },
           "failed": false,
           "errors": 0,
