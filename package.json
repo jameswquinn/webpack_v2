@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --profile --json > stats.json"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +26,7 @@
     "ts-loader": "^5.4.3",
     "typescript": "^3.4.5",
     "webpack": "^4.30.0",
+    "webpack-build-notifier": "^1.0.1",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.1"
   },

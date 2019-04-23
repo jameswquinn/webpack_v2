@@ -19,6 +19,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 //const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
@@ -82,7 +83,12 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new WebpackBuildNotifierPlugin({
+      title: "My Project Webpack Build",
+      logo: path.resolve("./static/cropped-favicon.png"),
+      suppressSuccess: true
+    })
     //new BundleAnalyzerPlugin()
   ],
 
@@ -93,7 +99,7 @@ module.exports = {
   output: {
     pathinfo: false,
     chunkFilename: "[name].js",
-    filename: "[name].js",
+    filename: "[name].js"
     //path: path.resolve(__dirname, "dist")
   },
   optimization: {
