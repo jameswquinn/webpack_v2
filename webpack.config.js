@@ -16,8 +16,8 @@ const path = require("path");
  *
  */
 
-const autoprefixer = require('autoprefixer');
-const precss = require('precss');
+const autoprefixer = require("autoprefixer");
+const precss = require("precss");
 
 /*
  * SplitChunksPlugin is enabled by default and replaced
@@ -32,7 +32,7 @@ const precss = require('precss');
  *
  */
 
- /*
+/*
  * We've enabled TerserPlugin for you! This minifies your app
  * in order to load faster and run less javascript.
  *
@@ -57,10 +57,8 @@ module.exports = {
       {
         include: [path.resolve(__dirname, "src")],
         loader: "babel-loader",
-
         options: {
           plugins: ["syntax-dynamic-import"],
-
           presets: [
             [
               "@babel/preset-env",
@@ -70,7 +68,6 @@ module.exports = {
             ]
           ]
         },
-
         test: /\.js$/
       },
       {
@@ -97,14 +94,13 @@ module.exports = {
             }
           },
           {
-						loader: "postcss-loader",
-
-						options: {
-							plugins: function() {
-								return [precss, autoprefixer];
-							}
-						}
-					},
+            loader: "postcss-loader",
+            options: {
+              plugins: function() {
+                return [precss, autoprefixer];
+              }
+            }
+          },
           {
             loader: "sass-loader",
             options: {
@@ -135,7 +131,6 @@ module.exports = {
   entry: {
     app: "./src/index"
   },
-
   output: {
     pathinfo: false,
     chunkFilename: "[name].js",
@@ -172,7 +167,6 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/
         }
       },
-
       chunks: "async",
       minChunks: 1,
       minSize: 30000,
