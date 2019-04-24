@@ -19,7 +19,7 @@ import './style.scss'
 class MyComponent extends HTMLElement {
   [x: string]: any;
   static get observedAttributes() {
-    return ["text"];
+    return ["text", "comment"];
   }
   constructor() {
     super();
@@ -28,7 +28,8 @@ class MyComponent extends HTMLElement {
     this.attachShadow({ mode: "open" }).innerHTML = `<style>
       h1 {color:var(--wc-color, green);}
       </style>
-      <h1>${this.text} Hello world! from inside web component</h1>`;
+      <h1>${this.text} Hello world! from inside web component</h1>
+      <h1>${this.comment} Hello world! from inside web component</h1>`;
   }
   attributeChangedCallback(attr, oldValue, newValue) {
     this[attr] = newValue;

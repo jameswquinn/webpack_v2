@@ -1,7 +1,25 @@
 const webpack = require("webpack");
 const path = require("path");
 
-/**
+/*
+ * We've enabled Postcss, autoprefixer and precss for you. This allows your app
+ * to lint  CSS, support variables and mixins, transpile future CSS syntax,
+ * inline images, and more!
+ *
+ * To enable SASS or LESS, add the respective loaders to module.rules
+ *
+ * https://github.com/postcss/postcss
+ *
+ * https://github.com/postcss/autoprefixer
+ *
+ * https://github.com/jonathantneal/precss
+ *
+ */
+
+const autoprefixer = require('autoprefixer');
+const precss = require('precss');
+
+/*
  * SplitChunksPlugin is enabled by default and replaced
  * deprecated CommonsChunkPlugin. It automatically identifies modules which
  * should be splitted of chunk by heuristics using module duplication count and
@@ -11,6 +29,14 @@ const path = require("path");
  * and was added as an educational example.
  *
  * https://webpack.js.org/plugins/split-chunks-plugin/
+ *
+ */
+
+ /*
+ * We've enabled TerserPlugin for you! This minifies your app
+ * in order to load faster and run less javascript.
+ *
+ * https://github.com/webpack-contrib/terser-webpack-plugin
  *
  */
 
@@ -70,6 +96,15 @@ module.exports = {
               sourceMap: true
             }
           },
+          {
+						loader: "postcss-loader",
+
+						options: {
+							plugins: function() {
+								return [precss, autoprefixer];
+							}
+						}
+					},
           {
             loader: "sass-loader",
             options: {

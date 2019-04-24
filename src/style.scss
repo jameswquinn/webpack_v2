@@ -5,3 +5,6 @@
 h1 {
     color: pink;
 }
+#fs-toggle:not(:fullscreen) {
+    background-color: #afa;
+}
