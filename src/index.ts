@@ -15,6 +15,7 @@ render(sayHello('World'), document.body);
 // And re-renders only update the data that changed, without VDOM diffing!
 render(sayHello('Everyone'), document.body);
 */
+import './style.scss'
 class MyComponent extends HTMLElement {
   [x: string]: any;
   static get observedAttributes() {

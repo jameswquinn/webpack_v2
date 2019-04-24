@@ -53,8 +53,8 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-              transpileOnly: true,
-              experimentalWatchApi: true
+              transpileOnly: true
+              //experimentalWatchApi: true
             }
           }
         ]
@@ -64,13 +64,17 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "style-loader"
+            loader: "css-loader",
+            options: {
+              url: false,
+              sourceMap: true
+            }
           },
           {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader"
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
           }
         ]
       }
@@ -89,7 +93,7 @@ module.exports = {
       title: "My Project Webpack Build",
       logo: path.resolve("./static/cropped-favicon.png"),
       suppressSuccess: true
-    }),
+    })
     //new BundleAnalyzerPlugin()
   ],
 
