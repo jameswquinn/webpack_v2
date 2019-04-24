@@ -1,7 +1,5 @@
 const webpack = require("webpack");
 const path = require("path");
-const precss = require("precss");
-const autoprefixer = require("autoprefixer");
 
 /**
  * SplitChunksPlugin is enabled by default and replaced
@@ -22,6 +20,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
+
 //const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
@@ -71,15 +70,6 @@ module.exports = {
             loader: "css-loader"
           },
           {
-            loader: "postcss-loader", // Run post css actions
-            options: {
-              plugins: function() {
-                // post css plugins, can be exported to postcss.config.js
-                return [require("precss"), require("autoprefixer")];
-              }
-            }
-          },
-          {
             loader: "sass-loader"
           }
         ]
@@ -99,7 +89,7 @@ module.exports = {
       title: "My Project Webpack Build",
       logo: path.resolve("./static/cropped-favicon.png"),
       suppressSuccess: true
-    })
+    }),
     //new BundleAnalyzerPlugin()
   ],
 
@@ -127,11 +117,11 @@ module.exports = {
       }),
       new HtmlWebpackPlugin({
         hash: true,
-        //template: "src/index.html",
-        filename: "index.html",
+        template: "./src/index.html",
+        filename: "app.html",
         minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
+          removeAttributeQuotes: false,
+          collapseWhitespace: false,
           removeComments: true
         }
       })
