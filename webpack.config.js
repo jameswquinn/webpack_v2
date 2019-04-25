@@ -152,10 +152,10 @@ module.exports = {
       new HtmlWebpackPlugin({
         hash: true,
         template: "./src/index.html",
-        filename: "app.html",
+        filename: "index.html",
         minify: {
-          removeAttributeQuotes: false,
-          collapseWhitespace: false,
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
           removeComments: true
         }
       })
