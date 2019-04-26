@@ -6,15 +6,6 @@ const dayjs = require("dayjs");
 const relativeTime = require("dayjs/plugin/relativeTime");
 dayjs.extend(relativeTime);
 
-function timeago(num) {
-  return dayjs(num).fromNow();
-  // => "5 days ago" ⚠️  the rounding method of this plugin is different from moment.js and date-fns, use with care.
-}
-
-//1556290746613
-alert(timeago(1556290746613));
-
-
 import "./style.scss";
 
 import {render, html} from "lit-html";
@@ -78,7 +69,7 @@ class MyComponent extends HTMLElement {
           color: var(--wc-color, green);
         }
       </style>
-      <h1>A long time ago ${timeago(1556290746613)}</h1>
+      <h1>A long time ago ${dayjs(1556290746613).fromNow()}</h1>
       <h1>${this.text} Hello world! from inside web component</h1>
       <h1>${this.comment} Hello world! from inside web component</h1>
     `;
