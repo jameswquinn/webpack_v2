@@ -47,8 +47,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 
-//const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-
 module.exports = {
   mode: "production",
   //mode: "development",
@@ -76,8 +74,8 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-              transpileOnly: true
-              //experimentalWatchApi: true
+              transpileOnly: true,
+              experimentalWatchApi: true
             }
           }
         ]
@@ -108,6 +106,25 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: "html-loader",
+          options: {
+            attrs: [":data-src"]
+          }
+        }
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "imgs"
+          }
+        }
       }
     ]
   },
@@ -125,7 +142,6 @@ module.exports = {
       logo: path.resolve("./static/cropped-favicon.png"),
       suppressSuccess: true
     })
-    //new BundleAnalyzerPlugin()
   ],
 
   entry: {

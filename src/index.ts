@@ -1,16 +1,53 @@
 import "./app";
+
 import "./style.scss";
 
 import { render, html } from "lit-html";
 
 import trim from "lodash-es/trim";
+import debounce from "lodash-es/debounce";
+
+var s;
+
+s = {};
+
+s._makeSearchRequest = function() {
+  return console.log("making search request");
+};
+
+s.search = debounce(s._makeSearchRequest, 1000);
+
+// call s.search three times in a row
+s.search();
+s.search();
+s.search();
+
+// call s.search after 500 ms
+setTimeout(s.search, 500);
+
+// call s.search after 3 seconds
+setTimeout(s.search, 3000);
+
+// timer to show passage of time
+var i = 0;
+var t = setInterval(function() {
+  i += 1;
+  console.log(i + " seconds elapsed");
+  if (i > 5) {
+    clearInterval(t);
+  }
+}, 1000);
+
+//import trim from "lodash-es/trim";
+
+
 let x = `Hello     `;
 alert(x + `James`);
 alert(trim(x) + `James`);
 
 class MyComponent extends HTMLElement {
-    text: unknown;
-    comment: unknown;
+    text: string;
+    comment: string;
   static get observedAttributes() {
     return ["text", "comment"];
   }
