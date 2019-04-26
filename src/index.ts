@@ -1,8 +1,24 @@
-import "./app";
+//import "./app";
+//import * as dayjs from "dayjs";
+const dayjs = require("dayjs");
+// dayjs ⚠️ requires relativeTime plugin
+//import relativeTime from "dayjs/plugin/relativeTime";
+const relativeTime = require("dayjs/plugin/relativeTime");
+dayjs.extend(relativeTime);
+
+function timeago() {
+  return dayjs(1556290746613).fromNow();
+  // => "5 days ago" ⚠️  the rounding method of this plugin is different from moment.js and date-fns, use with care.
+}
+
+
+alert(timeago())
+
 
 import "./style.scss";
 
-import { render, html } from "lit-html";
+import {render, html} from "lit-html";
+
 
 import trim from "lodash-es/trim";
 import debounce from "lodash-es/debounce";
@@ -62,6 +78,7 @@ class MyComponent extends HTMLElement {
           color: var(--wc-color, green);
         }
       </style>
+      <h1>A long time ago ${timeago()}</h1>
       <h1>${this.text} Hello world! from inside web component</h1>
       <h1>${this.comment} Hello world! from inside web component</h1>
     `;

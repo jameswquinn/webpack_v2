@@ -51,8 +51,7 @@ module.exports = {
   mode: "production",
   //mode: "development",
   module: {
-    rules: [
-      {
+    rules: [{
         include: [path.resolve(__dirname, "src")],
         loader: "babel-loader",
         options: {
@@ -70,15 +69,13 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: {
-              transpileOnly: true,
-              experimentalWatchApi: true
-            }
+        use: [{
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true,
+            experimentalWatchApi: true
           }
-        ]
+        }]
       },
       {
         test: /\.s?[ac]ss$/,
@@ -94,7 +91,7 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-              plugins: function() {
+              plugins: function () {
                 return [precss, autoprefixer];
               }
             }
@@ -143,7 +140,6 @@ module.exports = {
       suppressSuccess: true
     })
   ],
-
   entry: {
     app: "./src/index"
   },
