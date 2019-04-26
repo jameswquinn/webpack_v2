@@ -39,7 +39,6 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "@types/date-now": "^1.0.0",
     "@types/lodash-es": "^4.17.3",
     "@types/node": "^11.13.7",
     "dayjs": "^1.8.12",
