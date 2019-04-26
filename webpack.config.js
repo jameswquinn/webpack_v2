@@ -49,7 +49,6 @@ const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 
 module.exports = {
   mode: "production",
-  //mode: "development",
   module: {
     rules: [{
         include: [path.resolve(__dirname, "src")],
@@ -147,7 +146,6 @@ module.exports = {
     pathinfo: false,
     chunkFilename: "[name].js",
     filename: "[name].js"
-    //path: path.resolve(__dirname, "dist")
   },
   optimization: {
     minimizer: [
